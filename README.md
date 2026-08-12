@@ -138,6 +138,24 @@ src/
 
 ---
 
+## 📦 배포 및 소스 코드 관리
+
+본 프로젝트의 소스 코드는 GitHub에서 안전하게 버전 관리되고 있으며, Vercel을 통해 자동 배포(CI/CD)되도록 구성할 수 있습니다.
+
+### 소스 코드 저장소 (GitHub)
+- **저장소 주소**: [https://github.com/kyuyounglee/CTC_AUTO](https://github.com/kyuyounglee/CTC_AUTO)
+- **브랜치 관리**: `main` 브랜치를 기준으로 안정적인 배포 버전을 관리합니다.
+- **접근 권한**: 저장소 소유자(`kyuyounglee`) 및 권한이 부여된 협업자만 코드 푸시(Push)가 가능합니다. GitHub의 보안 정책에 따라 Personal Access Token(PAT)을 사용하여 인증해야 합니다.
+
+### Vercel을 통한 자동 배포 (CI/CD) 설정 방법
+코드 변경 사항을 GitHub에 푸시하면 Vercel을 통해 인터넷에 자동으로 사이트가 업데이트(배포)되도록 연동할 수 있습니다.
+
+1. **Vercel 프로젝트 연동**: [Vercel.com](https://vercel.com)에 로그인 후, `Add New > Project`에서 GitHub의 `CTC_AUTO` 저장소를 Import 합니다.
+2. **루트 디렉터리 설정 (중요 ⭐️)**: 실제 소스 코드가 최상위 폴더가 아닌 `src/` 하위에 위치하므로, 프로젝트 설정에서 **Root Directory를 `src`로 지정**해야 정상적으로 빌드됩니다. (Framework Preset은 `Vite`로 자동 인식됩니다.)
+3. **SPA 라우팅 지원**: 배포 후 URL 새로고침 시 발생하는 404 에러를 방지하기 위해 `src/vercel.json` 파일이 이미 구성되어 배포에 적용됩니다.
+
+---
+
 ## 실행 방법
 
 ### 사전 요구사항
