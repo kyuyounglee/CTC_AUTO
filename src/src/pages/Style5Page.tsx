@@ -3,7 +3,7 @@
 // ============================================================
 
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
+  Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
   BarChart, Bar, AreaChart, Area, ComposedChart
 } from 'recharts';
 

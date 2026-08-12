@@ -2,7 +2,7 @@
 // 연구소 R&D 관제 대시보드 - 철도 R&D 더미 데이터
 // ============================================================
 
-import type { DashboardResponse, PanelDetailResponse, ProjectOption } from '../features/dashboard/types';
+import type { DashboardResponse, PanelDetailResponse, ProjectOption } from '../../features/dashboard/types';
 
 export const DUMMY_PROJECTS: ProjectOption[] = [
   { id: 'all', name: '전체 프로젝트', status: 'active' },

@@ -5,7 +5,7 @@
 import { TopBar } from '../components/layout/TopBar';
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
-  BarChart, Bar, LineChart, Line,
+  BarChart, Bar,
 } from 'recharts';
 
 const HEALTH_TREND = [
@@ -34,14 +34,7 @@ const PROGRESS_DIST = [
   { range: '80~100%', count: 4 },
 ];
 
-const REQ_TREND = [
-  { month: '3월', 승인완료: 940, 미승인: 320 },
-  { month: '4월', 승인완료: 960, 미승인: 310 },
-  { month: '5월', 승인완료: 975, 미승인: 300 },
-  { month: '6월', 승인완료: 985, 미승인: 295 },
-  { month: '7월', 승인완료: 995, 미승인: 288 },
-  { month: '8월', 승인완료: 1002, 미승인: 282 },
-];
+
 
 const AI_ALERTS = [
   '▲ 프로젝트 B의 일정 지연 가능성 78% — 예상 완료일 준수율 낮음',
@@ -79,7 +72,7 @@ export function AnalyticsPage() {
                   <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                   <XAxis dataKey="month" tick={{ fontSize: 9, fill: '#9ca3af' }} tickLine={false} axisLine={false} />
                   <YAxis domain={[60, 100]} tick={{ fontSize: 9, fill: '#9ca3af' }} tickLine={false} axisLine={false} unit="%" />
-                  <Tooltip contentStyle={{ fontSize: 11, border: '1px solid #e5e7eb', borderRadius: 6 }} formatter={(v: number) => [`${v}%`, '']} />
+                  <Tooltip contentStyle={{ fontSize: 11, border: '1px solid #e5e7eb', borderRadius: 6 }} formatter={(v: any) => [`${v}%`, '']} />
                   <Area type="monotone" dataKey="종합 성과 지수" stroke="#2563eb" strokeWidth={2} fill="url(#grad-h)" dot={false} />
                 </AreaChart>
               </ResponsiveContainer>
@@ -108,7 +101,7 @@ export function AnalyticsPage() {
                   <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                   <XAxis dataKey="month" tick={{ fontSize: 9, fill: '#9ca3af' }} tickLine={false} axisLine={false} />
                   <YAxis domain={[75, 100]} tick={{ fontSize: 9, fill: '#9ca3af' }} tickLine={false} axisLine={false} unit="%" />
-                  <Tooltip contentStyle={{ fontSize: 11, border: '1px solid #e5e7eb', borderRadius: 6 }} formatter={(v: number) => [`${v}%`, '']} />
+                  <Tooltip contentStyle={{ fontSize: 11, border: '1px solid #e5e7eb', borderRadius: 6 }} formatter={(v: any) => [`${v}%`, '']} />
                   <Area type="monotone" dataKey="시험PASS" stroke="#0891b2" strokeWidth={2} fill="url(#grad-p)" dot={false} />
                 </AreaChart>
               </ResponsiveContainer>
@@ -137,7 +130,7 @@ export function AnalyticsPage() {
                   <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                   <XAxis dataKey="month" tick={{ fontSize: 9, fill: '#9ca3af' }} tickLine={false} axisLine={false} />
                   <YAxis domain={[60, 100]} tick={{ fontSize: 9, fill: '#9ca3af' }} tickLine={false} axisLine={false} unit="%" />
-                  <Tooltip contentStyle={{ fontSize: 11, border: '1px solid #e5e7eb', borderRadius: 6 }} formatter={(v: number) => [`${v}%`, '']} />
+                  <Tooltip contentStyle={{ fontSize: 11, border: '1px solid #e5e7eb', borderRadius: 6 }} formatter={(v: any) => [`${v}%`, '']} />
                   <Area type="monotone" dataKey="요구사항" stroke="#16a34a" strokeWidth={2} fill="url(#grad-r)" dot={false} />
                 </AreaChart>
               </ResponsiveContainer>

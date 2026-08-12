@@ -2,7 +2,7 @@
 // Executive KPI 바 — 최상단 6개 핵심 지표
 // ============================================================
 
-import type { DashboardSummary } from '../features/dashboard/types';
+import type { DashboardSummary } from '../types';
 
 interface Props {
   summary: DashboardSummary | undefined;

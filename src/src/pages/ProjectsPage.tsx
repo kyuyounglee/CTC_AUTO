@@ -5,7 +5,6 @@
 import { TopBar } from '../components/layout/TopBar';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
-  LineChart, Line,
 } from 'recharts';
 
 const PROJECTS_DETAIL = [

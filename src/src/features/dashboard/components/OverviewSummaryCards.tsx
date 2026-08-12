@@ -31,7 +31,7 @@ function RequirementsCard() {
                 data={data} dataKey="value" cx="50%" cy="50%" 
                 innerRadius="40%" outerRadius="85%" 
                 startAngle={90} endAngle={-270} strokeWidth={0}
-                label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
+                label={({ percent }: any) => `${(percent * 100).toFixed(0)}%`}
                 labelLine={false}
               >
                 {data.map((d, i) => <Cell key={i} fill={d.fill} />)}
@@ -89,7 +89,7 @@ function DesignDevCard() {
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" horizontal={false} />
               <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 9, fill: '#9ca3af' }} tickLine={false} axisLine={false} unit="%" />
               <YAxis type="category" dataKey="name" tick={{ fontSize: 10, fill: '#374151' }} tickLine={false} axisLine={false} width={56} />
-              <Tooltip contentStyle={{ fontSize: 11, border: '1px solid #e5e7eb', borderRadius: 6, padding: '4px 8px' }} formatter={(v: number) => [`${v}%`, '']} />
+              <Tooltip contentStyle={{ fontSize: 11, border: '1px solid #e5e7eb', borderRadius: 6, padding: '4px 8px' }} formatter={(v: any) => [`${v}%`, '']} />
               <Bar dataKey="value" fill="#2563eb" radius={[0, 3, 3, 0]} barSize={10} />
             </BarChart>
           </ResponsiveContainer>
@@ -124,7 +124,7 @@ function TestResultCard() {
                 data={data} dataKey="value" cx="50%" cy="50%" 
                 innerRadius="40%" outerRadius="85%" 
                 startAngle={90} endAngle={-270} strokeWidth={0}
-                label={({ name, percent }) => percent > 0.05 ? `${(percent * 100).toFixed(0)}%` : ''}
+                label={({ percent }: any) => percent > 0.05 ? `${(percent * 100).toFixed(0)}%` : ''}
                 labelLine={false}
               >
                 {data.map((d, i) => <Cell key={i} fill={d.fill} />)}

@@ -80,7 +80,7 @@ function DomainContent({ domainId }: { domainId: string }) {
             )}
             {panel.chart.type === 'card' && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8, padding: '8px 0' }}>
-                {panel.kpis?.map((kpi) => (
+                {panel.kpis?.map((kpi: any) => (
                   <div key={kpi.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', borderRadius: 6, background: '#f9fafb', border: '1px solid #e5e7eb' }}>
                     <span style={{ fontSize: 12, color: '#374151' }}>{kpi.label}</span>
                     <span style={{ fontSize: 13, fontWeight: 700, color: kpi.status === 'critical' ? '#dc2626' : kpi.status === 'warning' ? '#d97706' : '#111827' }}>{kpi.value}</span>
@@ -143,7 +143,7 @@ export function DomainPage() {
       <div className="content-area">
         {/* 탭 바 */}
         <div className="tab-bar" role="tablist" aria-label="도메인 탭">
-          {DOMAIN_TABS.map((t) => (
+          {DOMAIN_TABS.map((t: any) => (
             <button
               key={t.id}
               role="tab"

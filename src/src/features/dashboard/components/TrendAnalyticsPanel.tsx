@@ -55,7 +55,7 @@ export function TrendAnalyticsPanel() {
               <YAxis domain={[60, 100]} tick={{ fontSize: 10, fill: '#9ca3af' }} tickLine={false} axisLine={false} unit="%" />
               <Tooltip
                 contentStyle={{ fontSize: 11, border: '1px solid #e5e7eb', borderRadius: 6, padding: '6px 10px' }}
-                formatter={(v: number, name: string) => [`${v}%`, name]}
+                formatter={(v: any, name: any) => [`${v}%`, name]}
               />
               <Legend wrapperStyle={{ fontSize: 10 }} iconType="circle" iconSize={6} />
               <Area type="monotone" dataKey="종합 성과 지수" stroke="#2563eb" strokeWidth={2} fill="url(#grad-health)" dot={false} activeDot={{ r: 3 }} />

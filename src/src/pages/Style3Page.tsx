@@ -4,7 +4,7 @@
 
 import { 
   PieChart, Pie, Cell, ResponsiveContainer, LineChart, Line,
-  BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, AreaChart, Area, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar 
+  BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, AreaChart, Area, RadarChart, PolarGrid, PolarAngleAxis, Radar 
 } from 'recharts';
 
 export function Style3Page() {
@@ -62,7 +62,7 @@ export function Style3Page() {
               <div style={{ flex: 1, height: '100%', minHeight: 0, position: 'relative' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
-                    <Pie data={[{v:78, c:'#16a34a'},{v:22, c:'#e5e7eb'}]} dataKey="v" cx="50%" cy="50%" innerRadius="60%" outerRadius="90%" strokeWidth={0} label={({percent}) => percent > 0.1 ? `${(percent*100).toFixed(0)}%` : ''} labelLine={false}>
+                    <Pie data={[{v:78, c:'#16a34a'},{v:22, c:'#e5e7eb'}]} dataKey="v" cx="50%" cy="50%" innerRadius="60%" outerRadius="90%" strokeWidth={0} label={({percent}: any) => percent > 0.1 ? `${(percent*100).toFixed(0)}%` : ''} labelLine={false}>
                       {[{c:'#16a34a'},{c:'#e5e7eb'}].map((d, i) => <Cell key={i} fill={d.c} />)}
                     </Pie>
                   </PieChart>

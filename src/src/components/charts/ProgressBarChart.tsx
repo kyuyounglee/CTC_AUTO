@@ -31,7 +31,7 @@ export function ProgressBarChart({ data, keys, colors, height = 90, layout = 'ho
           <YAxis type="category" dataKey="category" tick={{ fontSize: 9, fill: '#64748b' }} tickLine={false} axisLine={false} width={52} />
           <Tooltip
             contentStyle={{ fontSize: 11, border: '1px solid #e2e8f0', borderRadius: 4, padding: '4px 8px' }}
-            formatter={(v: number) => [`${v}%`, '']}
+            formatter={(v: any) => [`${v}%`, '']}
           />
           {keys.map((key, i) => (
             <Bar key={key} dataKey={key} fill={colors[i] ?? '#0891b2'} radius={[0, 3, 3, 0]} barSize={10}>

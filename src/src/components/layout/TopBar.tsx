@@ -16,7 +16,7 @@ interface Props {
 export function TopBar({ title, subtitle, alerts = [] }: Props) {
   const { filters, setFilters } = useFilterStore();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const highCount = alerts.filter((a) => a.severity === 'high').length;
+  // const highCount = alerts.filter((a) => a.severity === 'high').length;
 
   return (
     <>
